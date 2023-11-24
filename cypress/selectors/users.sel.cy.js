@@ -4,6 +4,6 @@ module.exports = {
     password: '#userPassword1',
     passwordConfirmation: '#userPasswordConfirmation',
     roles: '#userRoles',
-    SubmitButton: '#submit',
+    submitButton: '#submit',
     panel_success: 'div[id=alert-success]'
 }

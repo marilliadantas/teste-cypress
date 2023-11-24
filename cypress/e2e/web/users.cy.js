@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 
-import {faker} from '@faker-js/faker'
+import { fakerPT_BR as faker} from '@faker-js/faker'
 
 describe('Admins devem realizar o cadastro de novos usuários', () => {
     let data
 
   before(() => {
-    cy.fixture("example").then((tData) => {
+    cy.fixture("login").then((tData) => {
       data = tData;
       // cy.log(data.username)
       // cy.log(data.password)
@@ -18,6 +18,6 @@ describe('Admins devem realizar o cadastro de novos usuários', () => {
     const password = faker.internet.password(10)
 
     cy.login(data.username, data.password)
-    cy.new_user(faker.name.fullName(), faker.internet.email(), password, "ADMIN")
+    cy.new_user(faker.person.fullName(), faker.internet.email(), password, "ADMIN")
   })
 })

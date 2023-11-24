@@ -4,7 +4,7 @@ describe("Usuários devem realizar o login", () => {
   let data
 
   before(() => {
-    cy.fixture("example").then((tData) => {
+    cy.fixture("login").then((tData) => {
       data = tData;
       // cy.log(data.username)
       // cy.log(data.password)
