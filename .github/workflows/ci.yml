@@ -24,8 +24,17 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npm install cypress
-        
+        run: |
+          npm install cypress
+          $(npm bin)/cypress run
 
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-results
+          path: cypress/videos  # Pode ser ajustado conforme necessário
 
-    
+      - name: Generate Cypress Report
+        uses: bahmutov/cypress-gh-action@v2
+        with:
+          reportDir: cypress/reports/mochareports
