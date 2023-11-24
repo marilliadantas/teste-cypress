@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
             name: cypress-fixtures
-            path: cypress/fixtures/login.json
+            path: cypress/fixtures/login
 
       - name: Run Cypress tests
         run: npx cypress run
