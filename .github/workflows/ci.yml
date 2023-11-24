@@ -31,8 +31,8 @@ jobs:
       - name: Archive Fixtures
         uses: actions/upload-artifact@v2
         with:
-            name: cypress-fixtures/login
-            path: cypress/fixtures/login
+            name: cypress-fixtures
+            path: cypress/fixtures/login.json
 
       - name: Run Cypress tests
         run: npx cypress run
