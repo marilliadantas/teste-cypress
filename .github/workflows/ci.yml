@@ -28,5 +28,11 @@ jobs:
           npm install cypress-xpath
           npm install @faker-js/faker
 
+      - name: Archive Fixtures
+        uses: actions/upload-artifact@v2
+        with:
+            name: cypress-fixtures
+            path: cypress/fixtures
+
       - name: Run Cypress tests
         run: npx cypress run
