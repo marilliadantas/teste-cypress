@@ -25,5 +25,3 @@ jobs:
 
     - name: Executar Testes Cypress
       run: npx cypress run
-
-    
