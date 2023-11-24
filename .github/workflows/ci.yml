@@ -21,12 +21,13 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: 
-          npm install
-          npm install cypress
-          npm install cypress-plugin-api 
-          npm install cypress-xpath
-          npm install @faker-js/faker
+        run: npm run install-dependencies
 
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npm run test:e2e
+
+      - name: Archive Fixtures
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-fixtures
+          path: cypress/fixtures
