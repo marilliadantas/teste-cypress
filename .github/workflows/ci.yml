@@ -26,6 +26,7 @@ jobs:
           npm install cypress
           npm install cypress-plugin-api 
           npm install cypress-xpath
+          npm install faker 
 
       - name: Run Cypress tests
         run: npx cypress run
