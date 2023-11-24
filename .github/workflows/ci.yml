@@ -1,27 +1,12 @@
-name: Pipeline de teste Cypress
-
-on:
-  push:
-    branches:
-      - main  # ajuste conforme a branch do seu repositório
-
+name: End-to-end tests 🧪
+on: [push]
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
+  cypress-run:
+    runs-on: ubuntu-20.04
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v2
-
-    - name: Configurar Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 14  # ajuste conforme a versão do Node.js utilizada no seu projeto
-
-    - name: Instalar Dependências
-      run: |
-        npm install
-        npm install cypress -D
-
-    - name: Executar Testes Cypress
-      run: npx cypress run
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
