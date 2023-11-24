@@ -24,6 +24,8 @@ jobs:
         run: 
           npm install
           npm install cypress
+          npm install cypress-plugin-api 
+          npm install cypress-xpath
 
       - name: Run Cypress tests
         run: npx cypress run
