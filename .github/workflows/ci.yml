@@ -1,0 +1,29 @@
+name: Pipeline de teste Cypress
+
+on:
+  push:
+    branches:
+      - main  # ajuste conforme a branch do seu repositório
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14  # ajuste conforme a versão do Node.js utilizada no seu projeto
+
+    - name: Instalar Dependências
+      run: |
+        npm install
+        npm install cypress -D
+
+    - name: Executar Testes Cypress
+      run: npx cypress run
+
+    
