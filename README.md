@@ -6,7 +6,7 @@ Projeto com finalidade de estudo e aprimoramento de habilidades de automação.
 - Instalar um editor de texto, como o [Visual Studio Code](https://code.visualstudio.com/download)
 - Instalar o [Git](https://git-scm.com/downloads) (caso queira trabalhar com projeto em sua máquina) 
 
-## 📥 Configurando o ambiente
+## ⚙️ Configurando o ambiente
 
 ### Instalando o NPM e o Cypress
 Na pasta do projeto, abra o terminal no VSCode (utilize o CTRL + J) e digite os seguintes comandos:
@@ -21,10 +21,10 @@ Para instalar uma versão específica:
 
     npm install cypress@3.8.3 --save-dev
 
-### Para iniciar o Cypress via Dashboard
+#### Para iniciar o Cypress via Dashboard
     npx cypress open
 
-## Executando no modo headless 
+#### Executando no modo headless 
     npx cypress run
 
 ## Recursos Adicionais
